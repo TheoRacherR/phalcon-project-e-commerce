@@ -1,30 +1,7 @@
-<div class="row">
-
-    <?php
-
-    use Product;
-
-    try {
-        $products = Product::query()
-            ->execute();
-
-        foreach ($products as $product) {
-    ?>
-            <div class="col-4 mt-2">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top img-fluid" src="<?php echo $product->picture_url ?>" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $product->name ?></h5>
-                        <p class="card-text"><?php echo $product->description ?></p>
-                        <a href="#" class="btn btn-primary">Détail</a>
-                    </div>
-                </div>
-            </div>
-    <?php
-        }
-    } catch (Exception $e) {
-        echo $e->getMessage();
-        echo $e->getTraceAsString();
-    }
-    ?>
+<div class="page-header">
+    <h1>Congratulations!</h1>
 </div>
+
+<p>You're now flying with Phalcon. Great things are about to happen!</p>
+
+<p>This page is located at <code>views/index/index.phtml</code></p>

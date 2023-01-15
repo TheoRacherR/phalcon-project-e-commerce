@@ -17,6 +17,12 @@ class PurchaseController extends ControllerBase
         {
         }
 
+        public function testAction()
+        {
+                $account = 'accountant';
+                $this->view->setVar("ownerNewPurchase", $account);  
+        }
+
 
 
 

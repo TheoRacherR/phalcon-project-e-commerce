@@ -105,7 +105,7 @@ class CategoryController extends ControllerBase
 
                 $category = new Category();
                 $category->childCategory = $this->request->getPost("child_category", "int");
-                $category->parent_category = $this->request->getPost("parent_category");
+                $category->parentCategory = $this->request->getPost("parent_category", "int");
                 $category->name = $this->request->getPost("name");
                 $category->createAt = $this->request->getPost("create_at");
                 $category->updateAt = $this->request->getPost("update_at");

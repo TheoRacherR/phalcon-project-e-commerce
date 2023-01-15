@@ -85,8 +85,6 @@ class ReviewController extends ControllerBase
                         $this->tag->setDefault("id_account", $review->id_account);
                         $this->tag->setDefault("comment", $review->comment);
                         $this->tag->setDefault("nb_star", $review->nb_star);
-                        $this->tag->setDefault("create_at", $review->create_at);
-                        $this->tag->setDefault("update_at", $review->update_at);
                 }
         }
 
@@ -109,8 +107,6 @@ class ReviewController extends ControllerBase
                 $review->idAccount = $this->request->getPost("id_account", "int");
                 $review->comment = $this->request->getPost("comment");
                 $review->nbStar = $this->request->getPost("nb_star", "int");
-                $review->createAt = $this->request->getPost("create_at");
-                $review->updateAt = $this->request->getPost("update_at");
 
 
                 if (!$review->save()) {
@@ -168,8 +164,6 @@ class ReviewController extends ControllerBase
                 $review->idAccount = $this->request->getPost("id_account", "int");
                 $review->comment = $this->request->getPost("comment");
                 $review->nbStar = $this->request->getPost("nb_star", "int");
-                $review->createAt = $this->request->getPost("create_at");
-                $review->updateAt = $this->request->getPost("update_at");
 
 
                 if (!$review->save()) {

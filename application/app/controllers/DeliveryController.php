@@ -231,7 +231,7 @@ class DeliveryController extends ControllerBase
                 $this->flash->success("delivery was deleted successfully");
 
                 $this->dispatcher->forward([
-                        'controller' => "delivery",
+                        'controller' => "product",
                         'action' => "index"
                 ]);
         }
